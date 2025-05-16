@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ioi67ixmpcj2"]
+
+[ext_resource type="PackedScene" uid="uid://bb0ahlkyh3phd" path="res://Scenes/1/tile_map.tscn" id="1_mh1y1"]
+[ext_resource type="PackedScene" uid="uid://dexu6oq0xn73p" path="res://Scenes/1/player.tscn" id="2_5a26f"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TileMap" parent="." instance=ExtResource("1_mh1y1")]
+layer_0/tile_data = PackedInt32Array(196603, 262145, 0, 196604, 262145, 0, 196605, 262145, 0, 196606, 262145, 0, 196607, 262145, 0, 131072, 262145, 0, 131073, 262145, 0, 131074, 262145, 0, 131075, 262145, 0, 131076, 262145, 0, 131077, 262145, 0, 131078, 262145, 0, 131079, 262145, 0, 131080, 262145, 0, 131081, 262145, 0)
+
+[node name="player" parent="." instance=ExtResource("2_5a26f")]
