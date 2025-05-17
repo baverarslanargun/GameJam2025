@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://s4h52ahtb77g" path="res://assets/1/waves-Sheet.png" id="4_l31kv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6ete"]
-size = Vector2(63.12, 20)
+size = Vector2(64.046, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1gd6j"]
 atlas = ExtResource("4_l31kv")
@@ -64,12 +64,12 @@ animations = [{
 }]
 
 [node name="Area2D" type="Area2D"]
-rotation = 0.323781
+rotation = 0.00698903
 scale = Vector2(0.291127, 0.291127)
 script = ExtResource("1_x6ete")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(319.352, 1.5241)
+position = Vector2(322.694, 1.52409)
 scale = Vector2(7.21739, 7.21739)
 shape = SubResource("RectangleShape2D_x6ete")
 
