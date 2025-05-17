@@ -8,6 +8,6 @@ func _ready():
 	# connect("body_entered", self, "_on_body_entered")
 
 func _on_body_entered(body):
-	if body.name == "CharacterBody2D":
+	if body.name == "Player":
 		get_node("/root/Game/GameManager").add_coin()
 		queue_free()

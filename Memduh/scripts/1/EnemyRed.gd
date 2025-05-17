@@ -13,7 +13,7 @@ func _ready() -> void:
 	add_to_group("magnetic")
 
 func _on_area_body_entered(body: Node) -> void:
-	if body.name == "CharacterBody2D":
+	if body.name == "Player":
 		player = body
 		chasing = true
 

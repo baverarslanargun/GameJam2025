@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b5nbudgg56ini" path="res://assets/1/magnet.png" id="1_6otc4"]
 [ext_resource type="Script" path="res://scripts/1/magnetA.gd" id="1_x6ete"]
-[ext_resource type="Script" path="res://scripts/1/magnet.gd" id="2_6rduj"]
+[ext_resource type="Script" uid="uid://np412mta66cp" path="res://scripts/1/magnet.gd" id="2_6rduj"]
 [ext_resource type="Texture2D" uid="uid://s4h52ahtb77g" path="res://assets/1/waves-Sheet.png" id="4_l31kv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6ete"]

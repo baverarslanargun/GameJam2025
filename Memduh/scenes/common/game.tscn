@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://b47oobkiuoka3"]
 
-[ext_resource type="Script" path="res://scripts/common/game.gd" id="1_8rwfb"]
+[ext_resource type="Script" uid="uid://dg87rhl87sy1x" path="res://scripts/common/game.gd" id="1_8rwfb"]
 [ext_resource type="PackedScene" uid="uid://cutn0lctenko2" path="res://scenes/common/player.tscn" id="1_h08au"]
 [ext_resource type="Texture2D" uid="uid://bfe0r16n1tt4k" path="res://assets/common/altbg.png" id="1_pwlp1"]
 [ext_resource type="Texture2D" uid="uid://cp5w04utu540d" path="res://assets/common/ustbg (1).png" id="1_xxa1q"]
@@ -11,11 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://ibw61ogj33m8" path="res://scenes/1/static_body_2d.tscn" id="7_ri013"]
 [ext_resource type="PackedScene" uid="uid://b5typ7bbqi0si" path="res://scenes/1/enemy_red.tscn" id="8_6x3rs"]
 [ext_resource type="Texture2D" uid="uid://jshyh6nhi5yx" path="res://assets/1/tiles/Tileset.png" id="8_v5s5y"]
-[ext_resource type="Script" path="res://scripts/1/GameManager.gd" id="9_o2hvl"]
+[ext_resource type="Script" uid="uid://184qt857ci1f" path="res://scripts/1/GameManager.gd" id="9_o2hvl"]
 [ext_resource type="Texture2D" uid="uid://bwduwhfwjqbe3" path="res://assets/1/coin.png" id="10_hulq1"]
 [ext_resource type="Texture2D" uid="uid://c3uakc6mj83hq" path="res://assets/common/freepik__expand__2730_leess (1).png" id="11_qh5s0"]
 [ext_resource type="PackedScene" uid="uid://d37b7j07cnsm3" path="res://scenes/1/coin.tscn" id="11_xhv0j"]
-[ext_resource type="Script" path="res://scripts/1/hurt_box_2.gd" id="15_dxqxq"]
+[ext_resource type="Script" uid="uid://dbi0a5gbnbduc" path="res://scripts/1/hurt_box_2.gd" id="15_dxqxq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l12tj"]
 size = Vector2(8738.17, 52.0002)
@@ -282,7 +282,7 @@ scale = Vector2(1.00023, -1.00023)
 texture = ExtResource("11_qh5s0")
 
 [node name="Player" parent="." instance=ExtResource("1_h08au")]
-position = Vector2(6857, 1856)
+position = Vector2(76.0005, 317)
 
 [node name="Area2D" parent="Player" instance=ExtResource("4_5ubx1")]
 position = Vector2(-3.24249e-05, 4.57764e-05)
