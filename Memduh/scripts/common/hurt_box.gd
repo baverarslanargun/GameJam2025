@@ -1,8 +1,7 @@
 extends Area2D
 
-signal dead
+signal dead2
 
 func _on_body_entered(body):
-	print("test2")
 	if body.name == "Player":
-		dead.emit()
+		dead2.emit()
