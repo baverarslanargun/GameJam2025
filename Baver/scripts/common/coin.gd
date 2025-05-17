@@ -1,13 +1,3 @@
-extends Area2D
+Sıkıntı olan ne biliyor musun bawer şu an cidden yapabileceğimiz çok bir şey yok elimizde asset yok 
 
-func _ready():
-	# h*ook the signal properly
-	add_to_group("coins")
-	connect("body_entered", Callable(self, "_on_body_entered"))
-	# or if your script is on the Area2D itself, this also works:
-	# connect("body_entered", self, "_on_body_entered")
-
-func _on_body_entered(body):
-	if body.name == "CharacterBody2D":
-		get_node("/root/Game/GameManager").add_coin()
-		queue_free()
+Elimiz kolumuz bağlı cidden rahatsız edici
