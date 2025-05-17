@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://b5typ7bbqi0si"]
+
+[ext_resource type="Script" uid="uid://bguw3py24kmnv" path="res://scripts/1/EnemyRed.gd" id="1_oaois"]
+[ext_resource type="Texture2D" uid="uid://cr0rwhiq5spgq" path="res://assets/1/Enemies.png" id="2_n6mdb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lphno"]
+size = Vector2(30, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4camm"]
+atlas = ExtResource("2_n6mdb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87ehp"]
+atlas = ExtResource("2_n6mdb")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fh2ak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4camm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87ehp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oup1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqmt2"]
+size = Vector2(38.1353, 35.9471)
+
+[node name="EnemyRed" type="CharacterBody2D"]
+scale = Vector2(40, 40)
+script = ExtResource("1_oaois")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+scale = Vector2(1.00555, 1)
+shape = SubResource("RectangleShape2D_lphno")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fh2ak")
+autoplay = "default"
+frame_progress = 0.415532
+
+[node name="Area2D" type="Area2D" parent="." groups=["magnetic"]]
+scale = Vector2(1.71979, 1.71979)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(14.9505, 14.9505)
+shape = SubResource("CircleShape2D_oup1n")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0.977828, 0)
+shape = SubResource("RectangleShape2D_kqmt2")
+debug_color = Color(0.94097, 0.192849, 0.38387, 0.42)

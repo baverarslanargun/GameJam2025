@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3 uid="uid://cio3rx11jn5pt"]
+
+[ext_resource type="Texture2D" uid="uid://b5nbudgg56ini" path="res://assets/1/magnet.png" id="1_6otc4"]
+[ext_resource type="Script" uid="uid://cxgxa8f7squ0g" path="res://scripts/1/magnetA.gd" id="1_x6ete"]
+[ext_resource type="Script" uid="uid://np412mta66cp" path="res://scripts/1/magnet.gd" id="2_6rduj"]
+[ext_resource type="Texture2D" uid="uid://s4h52ahtb77g" path="res://assets/1/waves-Sheet.png" id="4_l31kv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6ete"]
+size = Vector2(63.12, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gd6j"]
+atlas = ExtResource("4_l31kv")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rli4"]
+atlas = ExtResource("4_l31kv")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ngtn"]
+atlas = ExtResource("4_l31kv")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6uggx"]
+atlas = ExtResource("4_l31kv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt2ut"]
+atlas = ExtResource("4_l31kv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ue8hy"]
+atlas = ExtResource("4_l31kv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_luv68"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gd6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rli4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ngtn")
+}],
+"loop": true,
+"name": &"pull",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6uggx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bt2ut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue8hy")
+}],
+"loop": true,
+"name": &"push",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+rotation = 0.323781
+scale = Vector2(0.291127, 0.291127)
+script = ExtResource("1_x6ete")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(319.352, 1.5241)
+scale = Vector2(7.21739, 7.21739)
+shape = SubResource("RectangleShape2D_x6ete")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Magnet" type="Sprite2D" parent="Marker2D"]
+position = Vector2(127.089, 0.828202)
+rotation = 1.5708
+scale = Vector2(0.102204, 0.102204)
+texture = ExtResource("1_6otc4")
+script = ExtResource("2_6rduj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(195.519, -0.397001)
+scale = Vector2(1.67503, 1.67503)
+sprite_frames = SubResource("SpriteFrames_luv68")
+animation = &"push"
+frame_progress = 0.921254
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]

@@ -1,0 +1,547 @@
+[gd_scene load_steps=2 format=3 uid="uid://3v5drmlsi6f0"]
+
+[ext_resource type="PackedScene" uid="uid://d4eldph2awsaf" path="res://Scenes/common/animatable_body_2d.tscn" id="1_kukd1"]
+
+[node name="StaticPlatform" type="Node2D"]
+rotation = 3.14159
+scale = Vector2(3.47913, -1.69263)
+
+[node name="AnimatableBody2D" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-70.9951, -1127.83)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D2" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-62.0847, -1127.83)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D3" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-53.7493, -1127.83)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D4" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-45.7014, -1127.24)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D5" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-34.7791, -1127.83)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D6" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-26.1563, -1127.83)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D7" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-55.4739, -1184.55)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D8" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-63.522, -1184.55)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D9" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-71.8574, -1184.55)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D10" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-27.0186, -1203.45)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D11" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-35.6414, -1203.45)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D12" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-43.9768, -1204.04)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D13" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-15.8088, -1223.54)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D14" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-8.04834, -1222.95)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D15" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(0.287109, -1222.36)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D16" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-25.0066, -1166.23)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D17" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-16.6711, -1166.23)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D18" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-8.62329, -1166.23)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D19" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(2.58643, -1185.14)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D20" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(11.2092, -1184.55)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D21" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(19.5447, -1185.14)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D22" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(20.9819, -1128.42)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D23" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(28.4551, -1128.42)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D24" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(36.7905, -1128.42)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D25" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(-6.32373, -1110.11)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D26" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(1.14941, -1109.51)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D27" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(8.90991, -1108.92)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D28" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(11.7842, -1052.8)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D29" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(20.6946, -1052.8)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D30" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(30.1797, -1091.2)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D31" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(39.3772, -1091.2)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D32" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(48.575, -1090.61)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D33" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(56.3354, -1090.61)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D34" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(64.9585, -1091.2)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D35" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(49.1499, -1166.82)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D36" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(39.9521, -1204.04)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D37" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(48.0002, -1204.04)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D38" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(56.0481, -1204.04)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D39" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(11.2092, -1241.85)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D40" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(19.8323, -1241.26)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D41" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(28.4551, -1241.85)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D42" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(36.5029, -1260.17)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D43" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(44.551, -1260.17)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D44" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(52.8865, -1260.17)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D45" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(67.5452, -1238.9)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D46" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(76.4556, -1238.9)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D47" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(57.4854, -1166.82)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D48" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(65.5332, -1166.82)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D49" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(74.156, -1166.82)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D50" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(85.3657, -1166.82)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D51" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(93.4138, -1166.82)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D52" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(101.174, -1187.5)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D53" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(76.168, -1110.11)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D54" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(84.5034, -1110.11)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D55" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(93.1262, -1110.11)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D56" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(101.462, -1110.11)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D57" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(109.222, -1187.5)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D58" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(117.27, -1187.5)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D59" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(166.995, -1169.19)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D60" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(174.756, -1169.19)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D61" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(182.804, -1169.19)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D62" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(135.091, -1153.82)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D63" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(143.139, -1153.82)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D64" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(151.187, -1153.23)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D65" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(159.81, -1153.82)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D66" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(104.624, -1134.92)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D67" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(112.384, -1134.92)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D68" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(120.719, -1134.92)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D69" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(129.055, -1134.92)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D70" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(141.127, -1103.02)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D71" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(149.462, -1103.61)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D72" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(156.935, -1103.02)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D73" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(170.157, -1087.66)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D74" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(178.492, -1087.66)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D75" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(186.253, -1087.66)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D76" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(85.0784, -1072.29)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D77" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(93.7012, -1072.29)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D78" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(101.462, -1072.29)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D79" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(108.935, -1052.21)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D80" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(117.27, -1052.21)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D81" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(125.893, -1052.21)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D82" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(168.145, -1041.57)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D83" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(176.48, -1041.57)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D84" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(185.103, -1042.16)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D85" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(196.313, -1057.52)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D86" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(66.6829, -1033.3)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D87" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(75.0183, -1032.71)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D88" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(83.6411, -1032.12)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D89" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(91.9766, -1031.53)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D90" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(120.719, -1001.99)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D91" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(128.767, -1001.99)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D92" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(146.301, -1018.53)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D93" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(154.636, -1018.53)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D94" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(162.971, -1018.53)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D95" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(166.42, -977.767)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D96" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(174.181, -977.767)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D97" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(182.516, -977.767)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D98" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(204.073, -1057.52)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D99" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(212.122, -1056.93)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D100" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(195.163, -999.627)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D101" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(203.211, -999.627)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D102" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(210.684, -999.627)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D103" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(189.702, -938.184)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D104" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(197.463, -938.184)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D105" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(205.798, -938.184)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D106" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(141.989, -956.499)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D107" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(150.324, -956.499)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
+
+[node name="AnimatableBody2D108" parent="." instance=ExtResource("1_kukd1")]
+position = Vector2(158.085, -956.499)
+rotation = 3.14159
+scale = Vector2(0.287428, -0.590796)
