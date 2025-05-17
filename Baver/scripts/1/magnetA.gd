@@ -5,7 +5,13 @@ extends Area2D
 @export var push_force: float = 5000.0
 @export var pull_force: float = 4000.0
 @export var affect_radius: float = 200.0
-var player 
+
+@export var push_sfx: AudioStream
+@export var pull_sfx: AudioStream
+
+var player
+
+@onready var sfx_player: AudioStreamPlayer2D = $SFX
 
 func _ready() -> void:
 	visible = false
@@ -25,11 +31,17 @@ func _physics_process(delta: float) -> void:  # Fixed function name here
 		visible = true
 		$AnimatedSprite2D.play("push")
 		$AnimatedSprite2D.visible = true
+		# push sesi ata ve çal
+		sfx_player.stream = push_sfx
+		sfx_player.play()
 		apply_magnetic_force(true)
 	elif Input.is_action_pressed("pull"):
 		visible = true
 		$AnimatedSprite2D.play("pull")
 		$AnimatedSprite2D.visible = true
+		# pull sesi ata ve çal
+		sfx_player.stream = pull_sfx
+		sfx_player.play()
 		apply_magnetic_force(false)
 
 func apply_magnetic_force(is_push: bool) -> void:

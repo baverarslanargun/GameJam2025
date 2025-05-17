@@ -1,9 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://cio3rx11jn5pt"]
+[gd_scene load_steps=15 format=3 uid="uid://cio3rx11jn5pt"]
 
 [ext_resource type="Texture2D" uid="uid://b5nbudgg56ini" path="res://assets/1/magnet.png" id="1_6otc4"]
 [ext_resource type="Script" uid="uid://cxgxa8f7squ0g" path="res://scripts/1/magnetA.gd" id="1_x6ete"]
+[ext_resource type="AudioStream" uid="uid://oux3besbgtk1" path="res://assets/1/audio/SFX_Electric_Magnet_Working_Harsh_Loop.wav" id="2_1gd6j"]
 [ext_resource type="Script" uid="uid://np412mta66cp" path="res://scripts/1/magnet.gd" id="2_6rduj"]
 [ext_resource type="Texture2D" uid="uid://s4h52ahtb77g" path="res://assets/1/waves-Sheet.png" id="4_l31kv"]
+
+[sub_resource type="AudioStream" id="AudioStream_0rli4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6ete"]
 size = Vector2(63.12, 20)
@@ -67,6 +70,8 @@ animations = [{
 rotation = 0.323781
 scale = Vector2(0.291127, 0.291127)
 script = ExtResource("1_x6ete")
+push_sfx = ExtResource("2_1gd6j")
+pull_sfx = SubResource("AudioStream_0rli4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(319.352, 1.5241)
@@ -88,3 +93,5 @@ scale = Vector2(1.67503, 1.67503)
 sprite_frames = SubResource("SpriteFrames_luv68")
 animation = &"push"
 frame_progress = 0.921254
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
