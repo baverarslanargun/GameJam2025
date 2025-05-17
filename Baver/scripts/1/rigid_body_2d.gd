@@ -1,4 +1,4 @@
-# magnetic_object.gd - Attach to your RigidBody2D
+#rigid_body_2d.gd
 extends RigidBody2D
 
 # Make it available to the Inspector
