@@ -39,3 +39,4 @@ func _process(delta):
 	
 	if following:
 		global_position.x = player.global_position.x
+	

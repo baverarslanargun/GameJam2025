@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://b47oobkiuoka3"]
+[gd_scene load_steps=13 format=3 uid="uid://b47oobkiuoka3"]
 
 [ext_resource type="PackedScene" uid="uid://cutn0lctenko2" path="res://scenes/common/player.tscn" id="1_h08au"]
 [ext_resource type="Texture2D" uid="uid://btgjp61w07tsa" path="res://assets/1/NEW.jpg" id="1_kw4bd"]
-[ext_resource type="Texture2D" uid="uid://difwwhnimpxxw" path="res://assets/1/coin.png" id="4_4c5kk"]
 [ext_resource type="PackedScene" uid="uid://cio3rx11jn5pt" path="res://scenes/1/magnet.tscn" id="4_5ubx1"]
 [ext_resource type="PackedScene" uid="uid://bq0om4bl05rni" path="res://scenes/1/rigid_body_2d.tscn" id="5_6vl1a"]
 [ext_resource type="Script" uid="uid://dokosgsomnou1" path="res://scripts/1/rigid_body_2d.gd" id="6_6abyp"]
@@ -11,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://jshyh6nhi5yx" path="res://assets/1/tiles/Tileset.png" id="8_v5s5y"]
 [ext_resource type="PackedScene" uid="uid://cu7aqyladcd5w" path="res://scenes/1/coin.tscn" id="9_v5s5y"]
 [ext_resource type="Script" uid="uid://dv253747kl3ow" path="res://scripts/1/GameManager.gd" id="10_1mpov"]
-[ext_resource type="PackedScene" uid="uid://chuc7uogrqf7x" path="res://scenes/1/enemy.tscn" id="11_gyrv7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mpov"]
 texture = ExtResource("8_v5s5y")
@@ -175,24 +173,19 @@ sources/1 = SubResource("TileSetAtlasSource_1mpov")
 
 [node name="Game" type="Node2D"]
 
-[node name="New" type="Sprite2D" parent="."]
-position = Vector2(695.995, 311)
-scale = Vector2(1.29073, 2.89753)
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1989, 232.577)
+scale = Vector2(1.10748, 1.50938)
 texture = ExtResource("1_kw4bd")
 
-[node name="New" type="Sprite2D" parent="New"]
-position = Vector2(-1168.32, 0.446577)
+[node name="New2" type="Sprite2D" parent="Background"]
+position = Vector2(924.306, -0.173317)
+scale = Vector2(0.730665, 0.99582)
+texture = ExtResource("1_kw4bd")
+
+[node name="New" type="Sprite2D" parent="Background"]
+position = Vector2(-1167.52, 0.496887)
 scale = Vector2(1.16547, 0.99847)
-texture = ExtResource("1_kw4bd")
-
-[node name="Background" type="Sprite2D" parent="New"]
-position = Vector2(1001.76, 0.690252)
-scale = Vector2(0.858023, 1.00244)
-texture = ExtResource("1_kw4bd")
-
-[node name="New2" type="Sprite2D" parent="New"]
-position = Vector2(1794.83, -27.1558)
-scale = Vector2(0.626927, 0.518743)
 texture = ExtResource("1_kw4bd")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_h08au")]
@@ -248,33 +241,22 @@ position = Vector2(4318, 998)
 [node name="StaticBody2D7" parent="objects" instance=ExtResource("7_ri013")]
 position = Vector2(4094, 921)
 
-[node name="Area2D" parent="." groups=["coins"] instance=ExtResource("9_v5s5y")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 18.0
+offset_top = 25.0
+offset_right = 180.0
+offset_bottom = 68.0
+
+[node name="Area2D" parent="." instance=ExtResource("9_v5s5y")]
 position = Vector2(307, 380)
 
-[node name="Area2D2" parent="." groups=["coins"] instance=ExtResource("9_v5s5y")]
-position = Vector2(351, 381)
+[node name="Area2D2" parent="." instance=ExtResource("9_v5s5y")]
+position = Vector2(347, 382)
 
-[node name="Area2D3" parent="." groups=["coins"] instance=ExtResource("9_v5s5y")]
-position = Vector2(394, 380)
+[node name="Area2D3" parent="." instance=ExtResource("9_v5s5y")]
+position = Vector2(393, 383)
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("10_1mpov")
-
-[node name="CharacterBody2D2" parent="." instance=ExtResource("11_gyrv7")]
-position = Vector2(355, 366)
-scale = Vector2(0.200097, 0.200097)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("4_4c5kk")
-expand_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2

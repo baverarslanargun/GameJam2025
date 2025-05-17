@@ -204,6 +204,11 @@ scale = Vector2(0.190495, 0.190495)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
+[node name="Coin" type="Sprite2D" parent="CharacterBody2D/Camera2D"]
+position = Vector2(-287.181, -157.068)
+scale = Vector2(0.017966, 0.017966)
+texture = ExtResource("4_4c5kk")
+
 [node name="tiles" type="Node2D" parent="."]
 position = Vector2(-739, -38)
 
@@ -248,13 +253,13 @@ position = Vector2(4318, 998)
 [node name="StaticBody2D7" parent="objects" instance=ExtResource("7_ri013")]
 position = Vector2(4094, 921)
 
-[node name="Area2D" parent="." groups=["coins"] instance=ExtResource("9_v5s5y")]
+[node name="Area2D" parent="." instance=ExtResource("9_v5s5y")]
 position = Vector2(307, 380)
 
-[node name="Area2D2" parent="." groups=["coins"] instance=ExtResource("9_v5s5y")]
+[node name="Area2D2" parent="." instance=ExtResource("9_v5s5y")]
 position = Vector2(351, 381)
 
-[node name="Area2D3" parent="." groups=["coins"] instance=ExtResource("9_v5s5y")]
+[node name="Area2D3" parent="." instance=ExtResource("9_v5s5y")]
 position = Vector2(394, 380)
 
 [node name="GameManager" type="Node" parent="."]
@@ -266,15 +271,10 @@ scale = Vector2(0.200097, 0.200097)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("4_4c5kk")
-expand_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
-layout_mode = 2
+offset_left = -478.0
+offset_top = 56.0
+offset_right = -441.0
+offset_bottom = 99.0
+text = "0 / 12"
