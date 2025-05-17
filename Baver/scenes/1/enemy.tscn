@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://chuc7uogrqf7x"]
+
+[ext_resource type="Texture2D" uid="uid://cfp8b3y8c2h43" path="res://assets/1/17 May 2025 10_04_42.png" id="1_npiqh"]
+[ext_resource type="Script" uid="uid://bk0phk8emkkky" path="res://scripts/1/enemy.gd" id="1_osats"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_osats"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_osats")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-7.62939e-06, 0)
+scale = Vector2(0.326172, 0.338379)
+texture = ExtResource("1_npiqh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(15, 15)
+shape = SubResource("CircleShape2D_osats")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

@@ -16,10 +16,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:  # Fixed function name here
 	# Get the mouse position and calculate direction
 	var mouse_pos = get_global_mouse_position()
-	var direction = global_position.direction_to(mouse_pos)
-	
-	# Set the rotation to face the mouse
-	rotation = direction.angle()
+	look_at(mouse_pos);
 	
 	visible = false
 	$AnimatedSprite2D.visible = false

@@ -2,11 +2,13 @@
 
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
 var facingRight = true
 
+func _on_HurtArea_body_entered(body):
+	if body.name == "Negabot":
+		print("Düşman çarptı!")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -24,10 +26,10 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("Walk")
 		velocity.x = direction * SPEED
 		if direction < 0 and facingRight:
-			scale.x *= -1
+			$AnimatedSprite2D.scale.x *= -1
 			facingRight = false
 		elif direction > 0 and not facingRight:
-			scale.x *= -1
+			$AnimatedSprite2D.scale.x *= -1
 			facingRight = true
 	else:
 		$AnimatedSprite2D.play("Idle")
