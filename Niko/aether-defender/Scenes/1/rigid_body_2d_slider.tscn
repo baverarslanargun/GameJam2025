@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://jamx3233r80k"]
+
+[ext_resource type="Texture2D" uid="uid://bgdsxaptpctb8" path="res://assets/1/Tilemap-Metal.png" id="1_82lut"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wke5w"]
+atlas = ExtResource("1_82lut")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kk77u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wke5w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_kk77u")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+position = Vector2(31, 0)
+sprite_frames = SubResource("SpriteFrames_kk77u")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+position = Vector2(62, 0)
+sprite_frames = SubResource("SpriteFrames_kk77u")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+position = Vector2(93, 0)
+sprite_frames = SubResource("SpriteFrames_kk77u")
