@@ -1,0 +1,110 @@
+[gd_scene load_steps=18 format=3 uid="uid://dwvdu0q25tajd"]
+
+[ext_resource type="Texture2D" uid="uid://df1i2ky824k3j" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_000.png" id="1_pmr4a"]
+[ext_resource type="Texture2D" uid="uid://rovceu86iune" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_001.png" id="2_vnhc1"]
+[ext_resource type="Texture2D" uid="uid://c1m1hv46fb0vo" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_002.png" id="3_tkg3r"]
+[ext_resource type="Texture2D" uid="uid://bcn18cxysenmo" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_003.png" id="4_dsd74"]
+[ext_resource type="Texture2D" uid="uid://dlv5nx6pg3a1l" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_004.png" id="5_u7lhu"]
+[ext_resource type="Texture2D" uid="uid://ctmafrx10xgg5" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_005.png" id="6_6jax8"]
+[ext_resource type="Texture2D" uid="uid://i1b2hyeehc7p" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_006.png" id="7_wiqjg"]
+[ext_resource type="Texture2D" uid="uid://dbqe4nxiijvx6" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_007.png" id="8_nwqmk"]
+[ext_resource type="Texture2D" uid="uid://fe5hjar4owlb" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_008.png" id="9_bceyj"]
+[ext_resource type="Texture2D" uid="uid://b2m5l33a63btr" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_009.png" id="10_hyv4k"]
+[ext_resource type="Texture2D" uid="uid://dw7pohp07vy6s" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_010.png" id="11_sfacb"]
+[ext_resource type="Texture2D" uid="uid://b6wqq0fsvfbo3" path="res://Assets/1/enemies/Idle/Wraith_01_Idle_011.png" id="12_1y0p7"]
+[ext_resource type="PackedScene" uid="uid://bjd2i6ab7241m" path="res://Scenes/1/kill_zone.tscn" id="13_2gbhm"]
+
+[sub_resource type="GDScript" id="GDScript_pmr4a"]
+script/source = "extends CharacterBody2D
+
+const SPEED = 4
+
+#@onready var ray_cast_left = $KillZone/RayLeft
+#@onready var ray_cast_right =  $KillZone/RayRight
+@onready var player = get_node(\"root/Game/player\")
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+func _physics_process(delta):
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+	if player:
+		var direction = (player.global_position - global_position).normalized()
+		velocity.x = SPEED * direction * delta
+		move_and_slide()
+		
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pmr4a"]
+radius = 83.0
+height = 242.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vnhc1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pmr4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vnhc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tkg3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dsd74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u7lhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6jax8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wiqjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nwqmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bceyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hyv4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sfacb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1y0p7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vnhc1"]
+radius = 11.1582
+
+[node name="EnemyBlue" type="CharacterBody2D"]
+script = SubResource("GDScript_pmr4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, 7)
+shape = SubResource("CapsuleShape2D_pmr4a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(19, 36)
+sprite_frames = SubResource("SpriteFrames_vnhc1")
+
+[node name="KillZone" parent="." instance=ExtResource("13_2gbhm")]
+
+[node name="RayLeft" type="RayCast2D" parent="KillZone"]
+target_position = Vector2(-200, 0)
+
+[node name="RayRight" type="RayCast2D" parent="KillZone"]
+target_position = Vector2(200, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(8, 17)
+scale = Vector2(7.08, 6.56)
+shape = SubResource("CapsuleShape2D_vnhc1")
