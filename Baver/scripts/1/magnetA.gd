@@ -39,38 +39,45 @@ func _physics_process(delta: float) -> void:
 				print("  - Distance:", distance, "Radius:", affect_radius)
 				
 				if distance <= affect_radius and body.mass < 30:
+					# For lighter objects, move the object
 					var force_dir = global_position.direction_to(body.global_position)
 					var force_strength = lerp(0.0, 1.0, 1.0 - (distance / affect_radius))
 					
 					print("  - Force direction:", force_dir)
 					print("  - Force strength:", force_strength)
 					print("  - Body mass:", body.mass)
-					print("  - Body mode:", body.freeze_mode)
-					print("  - Body sleeping:", body.sleeping)
 					
+					# Try using impulse instead of force for more immediate effect
 					if Input.is_action_pressed("push"):
-						var force = force_dir * push_force * force_strength
-						body.apply_central_force(force)
-						print("  - Pushing with force:", force)
+						var impulse = force_dir * push_force * force_strength * 0.1
+						body.apply_central_impulse(impulse)
+						print("  - Pushing with impulse:", impulse)
 					elif Input.is_action_pressed("pull"):
-						var force = -force_dir * pull_force * force_strength
-						body.apply_central_force(force)
-						print("  - Pulling with force:", force)
+						var impulse = -force_dir * pull_force * force_strength * 0.1
+						body.apply_central_impulse(impulse)
+						print("  - Pulling with impulse:", impulse)
 				
 				elif distance <= affect_radius and body.mass >= 30:
 					# For heavy objects, move the player instead
-					var force_dir = global_position.direction_to(body.global_position) * -1
-					var force_strength = lerp(0.0, 1.0, 1.0 - (distance / affect_radius))
+					var move_dir = global_position.direction_to(body.global_position) * -1
+					var move_strength = lerp(0.0, 1.0, 1.0 - (distance / affect_radius))
 					
-					# For CharacterBody2D, we need to modify velocity rather than apply force
+					# Calculate a direct movement vector for the player
+					var move_speed = 150.0  # Adjust this value as needed
+					
 					if Input.is_action_pressed("push"):
-						var push_vector = force_dir * push_force * force_strength * delta * 0.01
-						player.velocity += push_vector
-						print("  - Player pushed with velocity change:", push_vector)
+						# Move the player away from the heavy object
+						var move_vector = move_dir * move_speed * move_strength
+						player.velocity = move_vector  # Set directly to override current movement
+						print("  - Moving player with velocity:", move_vector)
 					elif Input.is_action_pressed("pull"):
-						var pull_vector = -force_dir * pull_force * force_strength * delta * 0.01
-						player.velocity += pull_vector
-						print("  - Player pulled with velocity change:", pull_vector)
+						# This would pull the player toward the heavy object
+						var move_vector = -move_dir * move_speed * move_strength
+						player.velocity = move_vector  # Set directly to override current movement
+						print("  - Moving player with velocity:", move_vector)
+						
+					# Make sure character moves by forcing a move_and_slide call
+					player.move_and_slide()
 				else:
 					print("  - Body out of range!")
 			else:
