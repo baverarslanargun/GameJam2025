@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctmafrx10xgg5"
-path="res://.godot/imported/Wraith_01_Idle_005.png-9a1f2d746ffcd02ad683775e0c7e7abd.ctex"
+path="res://.godot/imported/Wraith_01_Idle_005.png-39cfdc4b037c9238a4d409be107ea97b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1/enemies/Idle/Wraith_01_Idle_005.png"
-dest_files=["res://.godot/imported/Wraith_01_Idle_005.png-9a1f2d746ffcd02ad683775e0c7e7abd.ctex"]
+source_file="res://assets/1/enemies/Idle/Wraith_01_Idle_005.png"
+dest_files=["res://.godot/imported/Wraith_01_Idle_005.png-39cfdc4b037c9238a4d409be107ea97b.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu0h4wi0gcylq"
-path="res://.godot/imported/Wraith_01_Taunt_015.png-a896286db7a72c32d0e612462204b9c7.ctex"
+path="res://.godot/imported/Wraith_01_Taunt_015.png-3450ac43167fad3dc1eb0738c3d2d2e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1/enemies/Taunt/Wraith_01_Taunt_015.png"
-dest_files=["res://.godot/imported/Wraith_01_Taunt_015.png-a896286db7a72c32d0e612462204b9c7.ctex"]
+source_file="res://assets/1/enemies/Taunt/Wraith_01_Taunt_015.png"
+dest_files=["res://.godot/imported/Wraith_01_Taunt_015.png-3450ac43167fad3dc1eb0738c3d2d2e8.ctex"]
 
 [params]
 

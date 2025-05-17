@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1nenc085nw66"
-path="res://.godot/imported/Wraith_01_Casting Spells_002.png-2ba6d62e9d635738590e0566df2188bf.ctex"
+path="res://.godot/imported/Wraith_01_Casting Spells_002.png-1772b73ff0820241363d57beabbf4e33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1/enemies/Casting Spells/Wraith_01_Casting Spells_002.png"
-dest_files=["res://.godot/imported/Wraith_01_Casting Spells_002.png-2ba6d62e9d635738590e0566df2188bf.ctex"]
+source_file="res://assets/1/enemies/Casting Spells/Wraith_01_Casting Spells_002.png"
+dest_files=["res://.godot/imported/Wraith_01_Casting Spells_002.png-1772b73ff0820241363d57beabbf4e33.ctex"]
 
 [params]
 
