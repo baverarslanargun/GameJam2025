@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cutn0lctenko2"]
 
 [ext_resource type="Texture2D" uid="uid://cccm112bcesh2" path="res://assets/common/Roboguy-Sheet.png" id="1_h5o3b"]
-[ext_resource type="Script" path="res://scripts/common/player.gd" id="1_y7lxj"]
+[ext_resource type="Script" path="res://Scripts/common/player.gd" id="1_y7lxj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_culwo"]
 atlas = ExtResource("1_h5o3b")
