@@ -1,89 +1,27 @@
-[gd_scene load_steps=12 format=3 uid="uid://cio3rx11jn5pt"]
+[gd_scene load_steps=5 format=3 uid="uid://cio3rx11jn5pt"]
 
 [ext_resource type="Texture2D" uid="uid://b5nbudgg56ini" path="res://assets/1/magnet.png" id="1_6otc4"]
-[ext_resource type="Script" path="res://scripts/1/magnet.gd" id="2_6rduj"]
-[ext_resource type="Texture2D" uid="uid://s4h52ahtb77g" path="res://assets/1/waves-Sheet.png" id="3_um206"]
+[ext_resource type="Script" uid="uid://cxgxa8f7squ0g" path="res://scripts/1/magnetA.gd" id="1_x6ete"]
+[ext_resource type="Script" uid="uid://np412mta66cp" path="res://scripts/1/magnet.gd" id="2_6rduj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ym25u"]
-atlas = ExtResource("3_um206")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cry12"]
-atlas = ExtResource("3_um206")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n5p60"]
-atlas = ExtResource("3_um206")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1mfxw"]
-atlas = ExtResource("3_um206")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tww1y"]
-atlas = ExtResource("3_um206")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jbd5f"]
-atlas = ExtResource("3_um206")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_frmql"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ym25u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cry12")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n5p60")
-}],
-"loop": true,
-"name": &"pull",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1mfxw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tww1y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jbd5f")
-}],
-"loop": true,
-"name": &"push",
-"speed": 5.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_bnaeh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6ete"]
+size = Vector2(63.12, 20)
 
 [node name="Area2D" type="Area2D"]
-scale = Vector2(0.49346, 0.49346)
-
-[node name="Magnet" type="Sprite2D" parent="."]
-position = Vector2(120, 0)
-rotation = 1.5708
-scale = Vector2(0.0781016, 0.0781016)
-texture = ExtResource("1_6otc4")
-script = ExtResource("2_6rduj")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Magnet"]
-position = Vector2(0, -669.04)
-rotation = -1.5708
-scale = Vector2(25.0839, 25.0839)
-sprite_frames = SubResource("SpriteFrames_frmql")
-animation = &"push"
-frame_progress = 0.69348
+rotation = 0.323781
+scale = Vector2(0.291127, 0.291127)
+script = ExtResource("1_x6ete")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(8.95358, 8.95358)
-shape = SubResource("CircleShape2D_bnaeh")
+position = Vector2(319.352, 1.5241)
+scale = Vector2(7.21739, 7.21739)
+shape = SubResource("RectangleShape2D_x6ete")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(90, 0)
+
+[node name="Magnet" type="Sprite2D" parent="Marker2D"]
+position = Vector2(127.089, 0.828202)
 rotation = 1.5708
-scale = Vector2(0.0781016, 0.0781016)
+scale = Vector2(0.102204, 0.102204)
+texture = ExtResource("1_6otc4")
+script = ExtResource("2_6rduj")
