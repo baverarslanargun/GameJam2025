@@ -17,9 +17,7 @@ var knockback_strength := 500.0  # Increased strength for more noticeable effect
 var invincibility_timer := 0.0   # Added invincibility after taking damage
 var was_on_floor := false        # Track floor state for better jumping
 
-func _ready():
-	if is_inside_tree():
-		death.connect(get_node("/root/Game")._on_player_death)
+
 
 func _physics_process(delta: float) -> void:
 	was_on_floor = is_on_floor()
@@ -54,7 +52,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor() or was_on_floor: # Allow slight jump forgiveness
 			velocity.y = JUMP_VELOCITY
-			$AnimatedSprite2D.play("Jump")
+			
 	
 	# Get the input direction and handle the movement/deceleration.
 	var direction := Input.get_axis("left", "right")

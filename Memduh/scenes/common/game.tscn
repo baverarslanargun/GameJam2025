@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b47oobkiuoka3"]
+[gd_scene load_steps=26 format=3 uid="uid://b47oobkiuoka3"]
 
 [ext_resource type="Script" path="res://scripts/common/game.gd" id="1_8rwfb"]
 [ext_resource type="PackedScene" uid="uid://cutn0lctenko2" path="res://scenes/common/player.tscn" id="1_h08au"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dibb2ncwt1qjw" path="res://assets/common/heartpng (1).png" id="15_56s54"]
 [ext_resource type="Script" path="res://scripts/1/hurt_box_2.gd" id="15_dxqxq"]
 [ext_resource type="Script" path="res://scripts/common/hurt_box.gd" id="18_ryfyu"]
+[ext_resource type="AudioStream" uid="uid://c7d2hde76u6u7" path="res://assets/sounds/Boss.ogg" id="19_ioldp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l12tj"]
 size = Vector2(8738.17, 52.0002)
@@ -358,9 +359,6 @@ position = Vector2(4358, 999)
 [node name="StaticBody2D7" parent="Magnetic Area" instance=ExtResource("7_ri013")]
 position = Vector2(4094, 921)
 
-[node name="StaticBody2D57" parent="Magnetic Area" instance=ExtResource("7_ri013")]
-position = Vector2(1755, -5)
-
 [node name="StaticBody2D56" parent="Magnetic Area" instance=ExtResource("7_ri013")]
 position = Vector2(1722, -5)
 
@@ -676,6 +674,9 @@ position = Vector2(2007, 63)
 
 [node name="Area2D17" parent="Node2D" groups=["coins"] instance=ExtResource("11_xhv0j")]
 position = Vector2(1735, -135)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_ioldp")
 
 [connection signal="death" from="Player" to="." method="_on_player_death"]
 [connection signal="body_entered" from="HurtBox2" to="HurtBox2" method="_on_body_entered"]

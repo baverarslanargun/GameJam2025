@@ -49,9 +49,7 @@ func _on_area_body_entered(body: Node) -> void:
 		player = body
 		chasing = true
 		
-		# Check if AnimatedSprite2D exists
-		if has_node("AnimatedSprite2D"):
-			$AnimatedSprite2D.play("Chase")
+		# Check if AnimatedSprite2D exist
 		print("Player detected by enemy")
 
 func _on_area_body_exited(body: Node) -> void:
