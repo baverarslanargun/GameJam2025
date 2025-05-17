@@ -1,14 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://ioi67ixmpcj2"]
+[gd_scene load_steps=7 format=3 uid="uid://ioi67ixmpcj2"]
 
-[ext_resource type="PackedScene" uid="uid://dexu6oq0xn73p" path="res://Scenes/1/player.tscn" id="2_5a26f"]
-[ext_resource type="PackedScene" uid="uid://bjd2i6ab7241m" path="res://Scenes/1/kill_zone.tscn" id="3_5a26f"]
-[ext_resource type="Script" uid="uid://dtmwfxii5rq75" path="res://Scripts/1/kill_zone.gd" id="4_oxx0y"]
-[ext_resource type="Texture2D" uid="uid://bpoeg6y8wdh7q" path="res://Assets/1/tiles/Tiles.png" id="5_td42o"]
+[ext_resource type="PackedScene" uid="uid://bjd2i6ab7241m" path="res://scenes/1/kill_zone.tscn" id="3_5a26f"]
+[ext_resource type="Script" uid="uid://b1v5jyeofomja" path="res://Scripts/1/kill_zone.gd" id="4_oxx0y"]
+
+[sub_resource type="Resource" id="Resource_t34eu"]
+metadata/__load_path__ = "res://Scenes/1/player.tscn"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oxx0y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qio20"]
-texture = ExtResource("5_td42o")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -209,7 +209,7 @@ sources/0 = SubResource("TileSetAtlasSource_qio20")
 
 [node name="Game" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("2_5a26f")]
+[node name="player" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 

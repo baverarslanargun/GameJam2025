@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p3kqu3nppwi7"
-path="res://.godot/imported/Wraith_01_Hurt_009.png-eb79da9a617ceb2abf6a08dc6d72c744.ctex"
+path="res://.godot/imported/Wraith_01_Hurt_009.png-08b61040e95d9b96fa0a8008ce7310c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1/enemies/Hurt/Wraith_01_Hurt_009.png"
-dest_files=["res://.godot/imported/Wraith_01_Hurt_009.png-eb79da9a617ceb2abf6a08dc6d72c744.ctex"]
+source_file="res://assets/1/enemies/Hurt/Wraith_01_Hurt_009.png"
+dest_files=["res://.godot/imported/Wraith_01_Hurt_009.png-08b61040e95d9b96fa0a8008ce7310c9.ctex"]
 
 [params]
 

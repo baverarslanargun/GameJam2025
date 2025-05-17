@@ -11,20 +11,21 @@ func _ready() -> void:
 	visible = false
 	print("Magnet initialized with radius:", affect_radius)
 	print("Push force:", push_force, "Pull force:", pull_force)
-	player = get_node("/root/Game/CharacterBody2D")
+	player = get_node("/root/Game/Player")
 
 func _physics_process(delta: float) -> void:  # Fixed function name here
 	# Get the mouse position and calculate direction
+	push_force = 5000.0
 	var mouse_pos = get_global_mouse_position()
-	var direction = global_position.direction_to(mouse_pos)
 	
-	# Set the rotation to face the mouse
-	rotation = direction.angle()
+	look_at(mouse_pos)
+# Eğer karakter aynalanmışsa (sola bakıyorsa), tekrar aynal
 	
 	visible = false
 	$AnimatedSprite2D.visible = false
 	
 	if Input.is_action_pressed("push"):
+		
 		visible = true
 		$AnimatedSprite2D.play("push")
 		$AnimatedSprite2D.visible = true
@@ -95,3 +96,23 @@ func apply_magnetic_force(is_push: bool) -> void:
 				# Notify the obstacle of magnetic interaction (for effects)
 				if body.has_method("highlight_magnetic_influence"):
 					body.highlight_magnetic_influence(force_strength * magnetic_str)
+					
+			elif body is CharacterBody2D:
+				
+				var impulse_force = push_force if is_push else pull_force
+				var impulse_dir = force_dir if is_push else -force_dir
+				var impulse = impulse_dir * impulse_force * force_strength * 0.1
+					
+				var move_dir = force_dir  # Direction away from heavy object
+				var move_strength = lerp(0.0, 1.0, 1.0 - (distance / affect_radius))
+				var move_speed = 150.0
+				if is_push:
+					var magnet_power_level = 10;
+					var move_vector = move_dir * move_speed * move_strength
+					body.velocity = move_vector * magnet_power_level
+					body.move_and_slide()
+				else:
+					pass;
+					#var move_vector = -move_dir * move_speed * move_strength
+					#body.velocity = move_vector
+					#body.move_and_slide()
