@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwv3fgpd0crn0"
-path="res://.godot/imported/Wraith_01_Moving Forward_004.png-56251e3dfa682d5ef0384e01073cbfab.ctex"
+path="res://.godot/imported/Wraith_01_Moving Forward_004.png-4cbf47f55c588c44ffb59f4c7ae8f230.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/1/enemies/Walking/Wraith_01_Moving Forward_004.png"
-dest_files=["res://.godot/imported/Wraith_01_Moving Forward_004.png-56251e3dfa682d5ef0384e01073cbfab.ctex"]
+source_file="res://Assets/1/enemies/Walking/Wraith_01_Moving Forward_004.png"
+dest_files=["res://.godot/imported/Wraith_01_Moving Forward_004.png-4cbf47f55c588c44ffb59f4c7ae8f230.ctex"]
 
 [params]
 

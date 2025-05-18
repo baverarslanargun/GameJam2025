@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cccm112bcesh2"
-path="res://.godot/imported/Roboguy-Sheet.png-4231a3dd3b4d7c97660d208574678c7e.ctex"
+path="res://.godot/imported/Roboguy-Sheet.png-74c36f608501fab321c59bfb8fe76179.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/common/Roboguy-Sheet.png"
-dest_files=["res://.godot/imported/Roboguy-Sheet.png-4231a3dd3b4d7c97660d208574678c7e.ctex"]
+source_file="res://Assets/common/Roboguy-Sheet.png"
+dest_files=["res://.godot/imported/Roboguy-Sheet.png-74c36f608501fab321c59bfb8fe76179.ctex"]
 
 [params]
 

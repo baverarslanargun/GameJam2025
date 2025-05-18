@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://u53ljp8foifw"
+path="res://.godot/imported/Map (basic version).wav-1d3f35a9e6c3099a7e540f0431aeb036.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Map (basic version).wav"
+dest_files=["res://.godot/imported/Map (basic version).wav-1d3f35a9e6c3099a7e540f0431aeb036.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

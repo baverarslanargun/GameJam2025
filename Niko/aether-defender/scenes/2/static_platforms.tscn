@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://3v5drmlsi6f0"]
 
-[ext_resource type="PackedScene" uid="uid://d4eldph2awsaf" path="res://Scenes/common/animatable_body_2d.tscn" id="1_kukd1"]
+[ext_resource type="PackedScene" uid="uid://d4eldph2awsaf" path="res://scenes/common/animatable_body_2d.tscn" id="1_kukd1"]
 
 [node name="StaticPlatform" type="Node2D"]
 rotation = 3.14159

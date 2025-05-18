@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmggs3imxjc14"
-path="res://.godot/imported/Wraith_01_Dying_010.png-a0cfc4ff9ea05d7933eb2c8238c6b758.ctex"
+path="res://.godot/imported/Wraith_01_Dying_010.png-2db2f42f7f49fbe01dea39f6a7a9ce21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/1/enemies/Dying/Wraith_01_Dying_010.png"
-dest_files=["res://.godot/imported/Wraith_01_Dying_010.png-a0cfc4ff9ea05d7933eb2c8238c6b758.ctex"]
+source_file="res://Assets/1/enemies/Dying/Wraith_01_Dying_010.png"
+dest_files=["res://.godot/imported/Wraith_01_Dying_010.png-2db2f42f7f49fbe01dea39f6a7a9ce21.ctex"]
 
 [params]
 

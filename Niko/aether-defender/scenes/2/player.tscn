@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://8v562ox76bfl"]
+
+[ext_resource type="Script" uid="uid://cna2q550o6sx6" path="res://scripts/2/player.gd" id="1_6wh7o"]
+[ext_resource type="Texture2D" uid="uid://cl2bnxpsej156" path="res://assets/common/Roboguy-Sheet-Final.png" id="1_bpnqw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui7q3"]
+atlas = ExtResource("1_bpnqw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83rej"]
+atlas = ExtResource("1_bpnqw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyep1"]
+atlas = ExtResource("1_bpnqw")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_coiat"]
+atlas = ExtResource("1_bpnqw")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0uw3"]
+atlas = ExtResource("1_bpnqw")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tm0x"]
+atlas = ExtResource("1_bpnqw")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1jgbm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ui7q3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83rej")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyep1")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_coiat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0uw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tm0x")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3mrhe"]
+radius = 11.0454
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(1.91384, 1.919)
+script = ExtResource("1_6wh7o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1jgbm")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_3mrhe")
+
+[node name="Camera2D" type="Camera2D" parent="."]

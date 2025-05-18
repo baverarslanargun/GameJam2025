@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b5nbudgg56ini" path="res://assets/1/magnet.png" id="1_6otc4"]
 [ext_resource type="Script" uid="uid://cxgxa8f7squ0g" path="res://scripts/1/magnetA.gd" id="1_x6ete"]
-[ext_resource type="Script" uid="uid://np412mta66cp" path="res://scripts/1/magnet.gd" id="2_6rduj"]
+[ext_resource type="AudioStream" uid="uid://l7g0u3dkqsab" path="res://assets/sounds/magnet.wav" id="4_elon2"]
 [ext_resource type="Texture2D" uid="uid://s4h52ahtb77g" path="res://assets/1/waves-Sheet.png" id="4_l31kv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6ete"]
@@ -65,7 +65,7 @@ animations = [{
 
 [node name="Area2D" type="Area2D"]
 rotation = 0.323781
-scale = Vector2(0.291127, 0.291127)
+scale = Vector2(0.2428, 0.2428)
 script = ExtResource("1_x6ete")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -80,7 +80,6 @@ position = Vector2(127.089, 0.828202)
 rotation = 1.5708
 scale = Vector2(0.102204, 0.102204)
 texture = ExtResource("1_6otc4")
-script = ExtResource("2_6rduj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(195.519, -0.397001)
@@ -89,6 +88,6 @@ sprite_frames = SubResource("SpriteFrames_luv68")
 animation = &"push"
 frame_progress = 0.921254
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+[node name="magnet" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_elon2")
+volume_db = -15.0

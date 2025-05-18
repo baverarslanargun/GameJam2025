@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0j8ix52d4bp"]
+
+[ext_resource type="Script" uid="uid://3yr6ttl8dcja" path="res://scenes/common/music.gd" id="1_u8dh1"]
+
+[sub_resource type="Resource" id="Resource_e2s1a"]
+metadata/__load_path__ = "ress://assets/sounds/Boss.wav"
+
+[node name="Music" type="Node"]
+script = ExtResource("1_u8dh1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("Resource_e2s1a")
+autoplay = true

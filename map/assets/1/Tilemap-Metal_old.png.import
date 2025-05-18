@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnl2muek4juqr"
-path="res://.godot/imported/Tilemap-Metal_old.png-4b779b5f90dc48262fea503adc260ad8.ctex"
+path="res://.godot/imported/Tilemap-Metal_old.png-1b815933f78e5ffdc4c2106f43d838fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/1/Tilemap-Metal_old.png"
-dest_files=["res://.godot/imported/Tilemap-Metal_old.png-4b779b5f90dc48262fea503adc260ad8.ctex"]
+source_file="res://Assets/1/Tilemap-Metal_old.png"
+dest_files=["res://.godot/imported/Tilemap-Metal_old.png-1b815933f78e5ffdc4c2106f43d838fe.ctex"]
 
 [params]
 
