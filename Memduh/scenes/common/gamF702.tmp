@@ -302,8 +302,8 @@ scale = Vector2(1.00023, -1.00023)
 texture = ExtResource("11_qh5s0")
 
 [node name="Player" parent="." instance=ExtResource("1_h08au")]
-position = Vector2(34.9996, 359)
-scale = Vector2(1.919, 1.919)
+position = Vector2(1593, -109)
+scale = Vector2(1.91869, 1.9291)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1.55487, -2.07348)
@@ -335,7 +335,7 @@ position = Vector2(4165, 1534)
 position = Vector2(4422, 1715)
 
 [node name="RigidBody2D" parent="Magnetic Area" instance=ExtResource("5_6vl1a")]
-position = Vector2(199, 402)
+position = Vector2(198, 309)
 collision_layer = 3
 mass = 10.0
 script = ExtResource("6_6abyp")

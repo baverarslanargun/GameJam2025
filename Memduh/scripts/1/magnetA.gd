@@ -7,6 +7,10 @@ extends Area2D
 
 var player 
 var last_applied_velocity := Vector2.ZERO
+var active := false
+
+func is_in_use() -> bool:
+	return active
 
 func _ready() -> void:
 	visible = false
@@ -25,11 +29,15 @@ func _physics_process(delta: float) -> void:
 	$AnimatedSprite2D.visible = false
 	
 	if Input.is_action_pressed("push"):
+		active = true;
+		$magnet.play()
 		visible = true
 		$AnimatedSprite2D.play("push")
 		$AnimatedSprite2D.visible = true
 		apply_magnetic_force(true, delta)
 	elif Input.is_action_pressed("pull"):
+		active = true;
+		$magnet.play()
 		visible = true
 		$AnimatedSprite2D.play("pull")
 		$AnimatedSprite2D.visible = true

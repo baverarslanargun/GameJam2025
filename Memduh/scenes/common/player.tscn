@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cutn0lctenko2"]
+[gd_scene load_steps=13 format=3 uid="uid://cutn0lctenko2"]
 
 [ext_resource type="Texture2D" uid="uid://cccm112bcesh2" path="res://assets/common/Roboguy-Sheet.png" id="1_h5o3b"]
 [ext_resource type="Script" path="res://Scripts/common/player.gd" id="1_y7lxj"]
+[ext_resource type="Texture2D" uid="uid://cl2bnxpsej156" path="res://assets/common/Roboguy-Sheet-Final.png" id="3_rcirq"]
+[ext_resource type="PackedScene" uid="uid://cio3rx11jn5pt" path="res://scenes/1/magnet.tscn" id="4_4ca03"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_culwo"]
 atlas = ExtResource("1_h5o3b")
@@ -10,6 +12,10 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_myaus"]
 atlas = ExtResource("1_h5o3b")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr0o1"]
+atlas = ExtResource("3_rcirq")
+region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s5s1j"]
 atlas = ExtResource("1_h5o3b")
@@ -38,6 +44,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qr0o1")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_s5s1j")
 }, {
 "duration": 1.0,
@@ -59,8 +73,11 @@ script = ExtResource("1_y7lxj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_82p63")
-animation = &"Walk"
+animation = &"Jump"
 autoplay = "Idle"
+frame_progress = 0.318715
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_qbcn8")
+
+[node name="Area2D" parent="." instance=ExtResource("4_4ca03")]

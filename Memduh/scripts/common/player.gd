@@ -16,45 +16,50 @@ var knockback_timer := 0.0
 var knockback_strength := 500.0  # Increased strength for more noticeable effect
 var invincibility_timer := 0.0   # Added invincibility after taking damage
 var was_on_floor := false        # Track floor state for better jumping
+var magnet_active := false
 
-
+func _ready():
+	if is_inside_tree():
+		death.connect(get_node("/root/Game")._on_player_death)
+		Global.previous_scene_path = get_tree().current_scene.scene_file_path
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("main"):
+		Global.previous_scene_path = get_tree().current_scene.scene_file_path
+		get_tree().change_scene_to_file("res://scenes/common/splash.tscn")
+	if Input.is_action_just_pressed("restart"):
+		Global.previous_scene_path = get_tree().current_scene.scene_file_path
+		get_tree().change_scene_to_file("res://scenes/common/restart.tscn")
+	
 	was_on_floor = is_on_floor()
 	
-	# Apply gravity
+	# Gravity
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
-	
-	# Handle invincibility
+
+	# Invincibility
 	if invincibility_timer > 0:
 		invincibility_timer -= delta
-		# Flash effect during invincibility
 		var flash_visible = int(invincibility_timer * 10) % 2 == 0
 		modulate.a = 0.4 if flash_visible else 1.0
 	else:
 		modulate.a = 1.0
-	
-	# Handle knockback with priority
+
+	# Knockback
 	if knockback_timer > 0:
 		knockback_timer -= delta
-		
-		if knockback_timer <= 0:
-			# When knockback ends, add a small boost if in air
-			if not is_on_floor():
-				velocity.y = min(velocity.y, 0)  # Reset downward velocity
-				
-		# Don't let player control during knockback
+		if knockback_timer <= 0 and not is_on_floor():
+			velocity.y = min(velocity.y, 0)
 		move_and_slide()
-		return  # Exit early to prevent player control
-	
-	# Handle jump with better buffering
+		return
+
+	# Jump (tam orijinal kodundaki gibi)
 	if Input.is_action_just_pressed("jump"):
-		if is_on_floor() or was_on_floor: # Allow slight jump forgiveness
+		if is_on_floor() or was_on_floor:
 			velocity.y = JUMP_VELOCITY
-			
-	
-	# Get the input direction and handle the movement/deceleration.
+			$AnimatedSprite2D.play("Jump")
+
+	# Direction ve animasyonlar
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		if is_on_floor():
@@ -70,7 +75,11 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			$AnimatedSprite2D.play("Idle")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
+
+	# Eğer havadaysa (zıplamıyor olsa bile) Jump animasyonu oynat
+	if not is_on_floor():
+		$AnimatedSprite2D.play("Jump")
+
 	move_and_slide()
 
 func apply_knockback(from_position: Vector2) -> void:
